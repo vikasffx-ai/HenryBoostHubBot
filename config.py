@@ -1,0 +1,2 @@
+ADMIN_ID = 7206565404
+SUPPORT_USERNAME = "@Toji_fusiiguru"
