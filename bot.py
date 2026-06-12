@@ -129,11 +129,6 @@ def cb(call):
             f"🎁 Referral Link:\nhttps://t.me/{bot.get_me().username}?start={uid}"
         )
 
-    elif call.data == "refer":
-    bot.send_message(call.message.chat.id,
-        f"🎁 Referral Link:\nhttps://t.me/{bot.get_me().username}?start={uid}"
-    )
-
 elif call.data == "buypoints":
     bot.send_message(call.message.chat.id,
         "💰 Buy Points\n\n📞 Contact: @Toji_fusiiguru"
