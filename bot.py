@@ -12,8 +12,7 @@ REFERRAL_REWARD = 100
 USERS_FILE = "users.json"
 ORDERS_FILE = "orders.json"
 
----------------- LOAD USERS ----------------
-
+# --------------- LOAD USERS ---------------
 def load_users():
 if not os.path.exists(USERS_FILE):
 return {}
@@ -25,7 +24,7 @@ def save_users(users):
 with open(USERS_FILE, "w") as f:
 json.dump(users, f, indent=4)
 
----------------- LOAD ORDERS ----------------
+# --------------- LOAD ORDERS ---------------
 
 def load_orders():
 if not os.path.exists(ORDERS_FILE):
@@ -38,8 +37,7 @@ def save_orders(data):
 with open(ORDERS_FILE, "w") as f:
 json.dump(data, f, indent=4)
 
----------------- MENU ----------------
-
+# --------------- MENU ---------------
 def menu():
 markup = telebot.types.InlineKeyboardMarkup()
 
