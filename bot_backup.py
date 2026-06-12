@@ -58,8 +58,8 @@ def start(message):
 
         if ref != uid:
             if ref in users:
-                users[ref]["points"] += 10
-                users[ref]["referrals"] += 1
+                users[ref]["points"] += 100
+                users[ref]["referrals"] += 100
 
     if uid not in users:
         users[uid] = {
