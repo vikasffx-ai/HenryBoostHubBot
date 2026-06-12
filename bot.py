@@ -58,7 +58,7 @@ def menu():
     telebot.types.InlineKeyboardButton("📞 Support", callback_data="support")
 )
 
-return markup
+    return markup
 
 # ---------------- START (REFERRAL FIX) ----------------
 @bot.message_handler(commands=['start'])
