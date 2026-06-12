@@ -125,9 +125,9 @@ def cb(call):
         )
 
     elif call.data == "refer":
-        bot.send_message(call.message.chat.id,
-            f"🎁 Referral Link:\nhttps://t.me/{bot.get_me().username}?start={uid}"
-        )
+    bot.send_message(call.message.chat.id,
+        f"🎁 Referral Link:\nhttps://t.me/{bot.get_me().username}?start={uid}"
+    )
 
 elif call.data == "buypoints":
     bot.send_message(call.message.chat.id,
@@ -147,7 +147,7 @@ elif call.data == "positive":
 elif call.data == "negative":
     bot.send_message(call.message.chat.id,
         "😡 Negative Reactions Service"
-    )
+                    )
 
 elif call.data == "support":
     bot.send_message(call.message.chat.id,
