@@ -14,29 +14,28 @@ ORDERS_FILE = "orders.json"
 
 # --------------- LOAD USERS ---------------
 def load_users():
-if not os.path.exists(USERS_FILE):
-return {}
+    if not os.path.exists(USERS_FILE):
+        return {}
 
-with open(USERS_FILE, "r") as f:
-    return json.load(f)
+    with open(USERS_FILE, "r") as f:
+        return json.load(f)
 
 def save_users(users):
-with open(USERS_FILE, "w") as f:
-json.dump(users, f, indent=4)
+    with open(USERS_FILE, "w") as f:
+        json.dump(users, f, indent=4)
 
 # --------------- LOAD ORDERS ---------------
 
 def load_orders():
-if not os.path.exists(ORDERS_FILE):
-return []
+    if not os.path.exists(ORDERS_FILE):
+        return []
 
-with open(ORDERS_FILE, "r") as f:
-    return json.load(f)
+    with open(ORDERS_FILE, "r") as f:
+        return json.load(f)
 
 def save_orders(data):
-with open(ORDERS_FILE, "w") as f:
-json.dump(data, f, indent=4)
-
+    with open(ORDERS_FILE, "w") as f:
+        json.dump(data, f, indent=4)
 # --------------- MENU ---------------
 def menu():
 markup = telebot.types.InlineKeyboardMarkup()
