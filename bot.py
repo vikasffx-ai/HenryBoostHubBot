@@ -22,39 +22,39 @@ def save_users(data):
 
 # ---------------- MAIN MENU ----------------
 def menu():
-markup = telebot.types.InlineKeyboardMarkup()
+    markup = telebot.types.InlineKeyboardMarkup()
 
-markup.add(
+    markup.add(
     telebot.types.InlineKeyboardButton("👤 Profile", callback_data="profile"),
     telebot.types.InlineKeyboardButton("💎 Balance", callback_data="balance")
 )
 
-markup.add(
+    markup.add(
     telebot.types.InlineKeyboardButton("💳 Buy Points", callback_data="buypoints"),
     telebot.types.InlineKeyboardButton("🎁 Invite & Earn", callback_data="refer")
 )
 
-markup.add(
+    markup.add(
     telebot.types.InlineKeyboardButton("👥 Telegram Members", callback_data="members")
 )
 
-markup.add(
+    markup.add(
     telebot.types.InlineKeyboardButton("👁 Telegram Views", callback_data="views")
 )
 
-markup.add(
+    markup.add(
     telebot.types.InlineKeyboardButton("❤️ Positive Reactions", callback_data="positive")
 )
 
-markup.add(
+    markup.add(
     telebot.types.InlineKeyboardButton("😡 Negative Reactions", callback_data="negative")
 )
 
-markup.add(
+    markup.add(
     telebot.types.InlineKeyboardButton("🔍 Track Order", callback_data="track")
 )
 
-markup.add(
+    markup.add(
     telebot.types.InlineKeyboardButton("📞 Support", callback_data="support")
 )
 
