@@ -129,10 +129,35 @@ def cb(call):
             f"🎁 Referral Link:\nhttps://t.me/{bot.get_me().username}?start={uid}"
         )
 
-    elif call.data == "support":
-        bot.send_message(call.message.chat.id,
-            "📞 Support: @Toji_fusiiguru"
-        )
+    elif call.data == "refer":
+    bot.send_message(call.message.chat.id,
+        f"🎁 Referral Link:\nhttps://t.me/{bot.get_me().username}?start={uid}"
+    )
+
+elif call.data == "buypoints":
+    bot.send_message(call.message.chat.id,
+        "💰 Buy Points\n\n📞 Contact: @Toji_fusiiguru"
+    )
+
+elif call.data == "track":
+    bot.send_message(call.message.chat.id,
+        "🔍 Apna Order ID bheje."
+    )
+
+elif call.data == "positive":
+    bot.send_message(call.message.chat.id,
+        "❤️ Positive Reactions Service"
+    )
+
+elif call.data == "negative":
+    bot.send_message(call.message.chat.id,
+        "😡 Negative Reactions Service"
+    )
+
+elif call.data == "support":
+    bot.send_message(call.message.chat.id,
+        "📞 Support: @Toji_fusiiguru"
+                    )
 
 # ---------------- ORDER COMMANDS ----------------
 @bot.message_handler(commands=['members', 'views', 'reactions'])
