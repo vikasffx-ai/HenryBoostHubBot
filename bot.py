@@ -38,38 +38,38 @@ def save_orders(data):
         json.dump(data, f, indent=4)
 # --------------- MENU ---------------
 def menu():
-markup = telebot.types.InlineKeyboardMarkup()
+    markup = telebot.types.InlineKeyboardMarkup()
 
-markup.add(
-    telebot.types.InlineKeyboardButton("👤 Profile", callback_data="profile"),
-    telebot.types.InlineKeyboardButton("💎 Balance", callback_data="balance")
-)
+    markup.add(
+        telebot.types.InlineKeyboardButton("👤 Profile", callback_data="profile"),
+        telebot.types.InlineKeyboardButton("💎 Balance", callback_data="balance")
+    )
 
-markup.add(
-    telebot.types.InlineKeyboardButton("💰 Buy Points", callback_data="buy_points")
-)
+    markup.add(
+        telebot.types.InlineKeyboardButton("💰 Buy Points", callback_data="buy_points")
+    )
 
-markup.add(
-    telebot.types.InlineKeyboardButton("🎁 Invite & Earn", callback_data="refer")
-)
+    markup.add(
+        telebot.types.InlineKeyboardButton("🎁 Invite & Earn", callback_data="refer")
+    )
 
-markup.add(
-    telebot.types.InlineKeyboardButton("📦 Services", callback_data="services")
-)
+    markup.add(
+        telebot.types.InlineKeyboardButton("📦 Services", callback_data="services")
+    )
 
-markup.add(
-    telebot.types.InlineKeyboardButton("🔍 Track Order", callback_data="track")
-)
+    markup.add(
+        telebot.types.InlineKeyboardButton("🔍 Track Order", callback_data="track")
+    )
 
-markup.add(
-    telebot.types.InlineKeyboardButton("📊 Statistics", callback_data="stats")
-)
+    markup.add(
+        telebot.types.InlineKeyboardButton("📊 Statistics", callback_data="stats")
+    )
 
-markup.add(
-    telebot.types.InlineKeyboardButton("📞 Support", callback_data="support")
-)
+    markup.add(
+        telebot.types.InlineKeyboardButton("📞 Support", callback_data="support")
+    )
 
-return markup
+    return markup
 # ---------------- START ----------------
 
 @bot.message_handler(commands=["start"])
