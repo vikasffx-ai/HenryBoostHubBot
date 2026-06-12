@@ -22,28 +22,43 @@ def save_users(data):
 
 # ---------------- MAIN MENU ----------------
 def menu():
-    markup = telebot.types.InlineKeyboardMarkup()
+markup = telebot.types.InlineKeyboardMarkup()
 
-    markup.add(
-        telebot.types.InlineKeyboardButton("👤 Profile", callback_data="profile"),
-        telebot.types.InlineKeyboardButton("💰 Balance", callback_data="balance")
-    )
+markup.add(
+    telebot.types.InlineKeyboardButton("👤 Profile", callback_data="profile"),
+    telebot.types.InlineKeyboardButton("💎 Balance", callback_data="balance")
+)
 
-    markup.add(
-        telebot.types.InlineKeyboardButton("👥 Members", callback_data="members"),
-        telebot.types.InlineKeyboardButton("👁 Views", callback_data="views")
-    )
+markup.add(
+    telebot.types.InlineKeyboardButton("💳 Buy Points", callback_data="buypoints"),
+    telebot.types.InlineKeyboardButton("🎁 Invite & Earn", callback_data="refer")
+)
 
-    markup.add(
-        telebot.types.InlineKeyboardButton("❤️ Reactions", callback_data="reactions"),
-        telebot.types.InlineKeyboardButton("🎁 Refer", callback_data="refer")
-    )
+markup.add(
+    telebot.types.InlineKeyboardButton("👥 Telegram Members", callback_data="members")
+)
 
-    markup.add(
-        telebot.types.InlineKeyboardButton("📞 Support", callback_data="support")
-    )
+markup.add(
+    telebot.types.InlineKeyboardButton("👁 Telegram Views", callback_data="views")
+)
 
-    return markup
+markup.add(
+    telebot.types.InlineKeyboardButton("❤️ Positive Reactions", callback_data="positive")
+)
+
+markup.add(
+    telebot.types.InlineKeyboardButton("😡 Negative Reactions", callback_data="negative")
+)
+
+markup.add(
+    telebot.types.InlineKeyboardButton("🔍 Track Order", callback_data="track")
+)
+
+markup.add(
+    telebot.types.InlineKeyboardButton("📞 Support", callback_data="support")
+)
+
+return markup
 
 # ---------------- START (REFERRAL FIX) ----------------
 @bot.message_handler(commands=['start'])
